@@ -1,0 +1,96 @@
+:root {
+  --bg: #060608;
+  --panel: rgba(18, 18, 24, 0.85);
+  --panel-strong: rgba(26, 26, 35, 0.95);
+  --text: #f4f5f7;
+  --muted: #f2c38b;
+  --accent: #f47521;
+  --accent-2: #8b5cf6;
+  --border: rgba(255,255,255,0.1);
+  --shadow: 0 20px 45px rgba(0,0,0,0.35);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(rgba(6, 6, 8, 0.82), rgba(6, 6, 8, 0.84)), url('/static/images/back_image.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.45), transparent);
+}
+
+.navbar {
+  background: rgba(9, 9, 12, 0.8);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar-brand, .nav-link, .navbar-toggler { color: var(--text) !important; }
+.nav-link:hover { color: var(--accent) !important; }
+
+.hero-card, .glass-card, .placeholder-card, .timeline-card, .team-card, .tech-card, .contact-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+}
+
+.hero-card { padding: 3rem; }
+.section-title { color: var(--accent); font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.8rem; }
+.text-gradient { background: linear-gradient(90deg, var(--accent), #ff9d65, var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.btn-accent { background: linear-gradient(135deg, var(--accent), #ff8f49); border: none; color: white; transition: transform .25s ease, box-shadow .25s ease; }
+.btn-accent:hover { transform: translateY(-2px); box-shadow: 0 12px 20px rgba(244,117,33,0.25); color: white; }
+.btn-outline { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.btn-outline:hover { color: var(--accent); border-color: var(--accent); }
+
+.icon-badge {
+  width: 54px; height: 54px; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, rgba(244,117,33,0.18), rgba(139,92,246,0.18)); color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.placeholder-card { min-height: 180px; padding: 1.2rem; }
+.placeholder-card .placeholder-box { border: 1px dashed rgba(255,255,255,0.16); min-height: 120px; border-radius: 18px; display: flex; align-items: center; justify-content: center; color: var(--muted); }
+
+.timeline-card { padding: 1.4rem; margin-bottom: 1rem; }
+.timeline-card:hover, .team-card:hover, .tech-card:hover, .contact-card:hover { transform: translateY(-6px); transition: transform .25s ease; }
+
+.team-hero-card {
+  background: linear-gradient(135deg, rgba(244,117,33,0.25), rgba(48, 12, 100, 0.75));
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.team-page {
+  background: transparent;
+}
+
+.profile-pic { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, rgba(244,117,33,0.25), rgba(139,92,246,0.25)); display: grid; place-items: center; color: white; font-size: 2rem; border: 2px solid rgba(255,255,255,0.16); }
+
+.form-control, .form-select { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); color: var(--text); }
+.form-control::placeholder { color: #f2c38b; }
+
+.text-muted, .small, p, li, label, .text-muted.lead, .text-muted.mb-1, .text-muted.mb-0 {
+  color: #ffe7bf !important;
+}
+
+.footer { border-top: 1px solid var(--border); background: rgba(9, 9, 12, 0.95); }
+
+.scroller { width: 42px; height: 42px; border: 1px solid rgba(255,255,255,0.18); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--accent); }
+
+@media (max-width: 768px) {
+  .hero-card { padding: 1.6rem; }
+}

@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home | Crunchyroll Trend Analysis
+{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <!-- Hero Section -->
+
+    <div class="hero-card row align-items-center g-5">
+
+        <div class="col-lg-6">
+
+            <span class="section-title">
+                FINAL YEAR DATA ANALYTICS PROJECT
+            </span>
+
+            <h1 class="display-4 fw-bold mt-3">
+
+                Crunchyroll
+
+                <span class="text-gradient">
+
+                    Trend Analysis
+
+                </span>
+
+            </h1>
+
+            <p class="lead mt-4">
+
+                A Data Analytics project developed using
+                Django and Power BI to analyse anime ratings,
+                popularity, genres and viewer engagement.
+
+                The project transforms raw Crunchyroll data
+                into meaningful dashboards and business insights.
+
+            </p>
+
+            <div class="mt-4 d-flex gap-3">
+
+                <a href="{% url 'analysis' %}"
+                   class="btn btn-accent btn-lg">
+
+                    <i class="fa-solid fa-chart-column me-2"></i>
+
+                    View Dashboard
+
+                </a>
+
+                <a href="{% url 'prediction' %}"
+                   class="btn btn-outline btn-lg">
+
+                    <i class="fa-solid fa-chart-line me-2"></i>
+
+                    Prediction
+
+                </a>
+
+            </div>
+
+        </div>
+                <!-- Dashboard Preview -->
+
+        <div class="col-lg-6">
+
+            <div class="glass-card p-3">
+
+                <img src="{% static 'images/dashboard_1.png' %}"
+                     class="img-fluid rounded shadow"
+                     alt="Power BI Dashboard">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- End Hero Section -->
+
+    <div class="row text-center mt-5">
+
+        <div class="col-lg-4">
+
+            <div class="glass-card p-4 h-100">
+
+                <div class="icon-badge mb-3">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+                <h4>Power BI Analytics</h4>
+
+                <p class="text-muted">
+
+                    Interactive dashboards created using
+                    Power BI to analyse anime ratings,
+                    popularity and viewer engagement.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="glass-card p-4 h-100">
+
+                <div class="icon-badge mb-3">
+
+                    <i class="fa-brands fa-python"></i>
+
+                </div>
+
+                <h4>Django + Python</h4>
+
+                <p class="text-muted">
+
+                    Responsive web application developed
+                    using Django, HTML, CSS, Bootstrap
+                    and Python.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="glass-card p-4 h-100">
+
+                <div class="icon-badge mb-3">
+
+                    <i class="fa-solid fa-database"></i>
+
+                </div>
+
+                <h4>Crunchyroll Dataset</h4>
+
+                <p class="text-muted">
+
+                    Dataset containing anime ratings,
+                    votes, episodes and genre information
+                    used for visualization and analysis.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+        <!-- Technology Stack -->
+
+    <div class="glass-card p-5 mt-5">
+
+        <div class="text-center mb-5">
+
+            <span class="section-title">
+
+                TECHNOLOGY STACK
+
+            </span>
+
+            <h2 class="fw-bold mt-3">
+
+                Technologies Used
+
+            </h2>
+
+        </div>
+
+        <div class="row text-center g-4">
+
+            <div class="col-md-3">
+
+                <div class="placeholder-card">
+
+                    <div class="placeholder-box">
+
+                        <i class="fa-solid fa-chart-column fa-2x mb-3 text-warning"></i>
+
+                        <h5>Power BI</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="placeholder-card">
+
+                    <div class="placeholder-box">
+
+                        <i class="fa-brands fa-python fa-2x mb-3 text-warning"></i>
+
+                        <h5>Python</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="placeholder-card">
+
+                    <div class="placeholder-box">
+
+                        <i class="fa-solid fa-globe fa-2x mb-3 text-warning"></i>
+
+                        <h5>Django</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="placeholder-card">
+
+                    <div class="placeholder-box">
+
+                        <i class="fa-solid fa-database fa-2x mb-3 text-warning"></i>
+
+                        <h5>SQLite</h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Workflow -->
+
+    <div class="glass-card p-5 mt-5">
+
+        <div class="text-center mb-5">
+
+            <span class="section-title">
+
+                PROJECT WORKFLOW
+
+            </span>
+
+            <h2 class="fw-bold mt-3">
+
+                Data Analysis Process
+
+            </h2>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col">
+
+                <div class="timeline-card">
+
+                    <h5>Dataset</h5>
+
+                    <p>Crunchyroll Anime Dataset</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto d-flex align-items-center">
+
+                <i class="fa-solid fa-arrow-right fa-2x text-warning"></i>
+
+            </div>
+
+            <div class="col">
+
+                <div class="timeline-card">
+
+                    <h5>Cleaning</h5>
+
+                    <p>Power Query</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto d-flex align-items-center">
+
+                <i class="fa-solid fa-arrow-right fa-2x text-warning"></i>
+
+            </div>
+
+            <div class="col">
+
+                <div class="timeline-card">
+
+                    <h5>Visualization</h5>
+
+                    <p>Power BI Dashboard</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-auto d-flex align-items-center">
+
+                <i class="fa-solid fa-arrow-right fa-2x text-warning"></i>
+
+            </div>
+
+            <div class="col">
+
+                <div class="timeline-card">
+
+                    <h5>Insights</h5>
+
+                    <p>Business Analysis</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </section>
+
+{% endblock %}

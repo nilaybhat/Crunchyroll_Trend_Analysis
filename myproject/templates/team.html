@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Team | Crunchyroll Trend Analysis{% endblock %}
+{% block content %}
+<section class="container py-5 team-page">
+  <div class="hero-card p-4 p-lg-5" data-aos="fade-up">
+    <p class="section-title">Meet the Team</p>
+    <h2 class="display-6 fw-bold mb-3">The core team behind the project</h2>
+    <p class="text-muted lead">A compact team section with the requested roles and responsibilities.</p>
+  </div>
+
+  <div class="row g-4 mt-4">
+    <div class="col-12" data-aos="fade-up">
+      <div class="team-card p-4 h-100 team-hero-card">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-3 mb-3">
+          <img src="{% static 'images/Nilay_bhattacharya.jpeg' %}" alt="Nilay Bhattacharya" class="profile-pic" style="object-fit:cover;">
+          <div>
+            <h5 class="fw-semibold mb-1 text-light">Nilay Bhattacharya</h5>
+            <p class="mb-1 text-info-emphasis">Project Leader • Backend Developer • Power BI & Data Visualization</p>
+            <p class="small text-warning">Leadership • Django • Python • Power BI • Project planning</p>
+          </div>
+        </div>
+        <p class="text-white">Guides the overall project direction, manages the website backend structure, and oversees the visualization and analytics presentation for the project.</p>
+        <p class="small text-white"><strong>Responsibilities:</strong> Project leadership • Backend development • Power BI visualization • Requirements analysis • Final coordination</p>
+      </div>
+    </div>
+
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="team-card p-4 h-100">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="{% static 'images/Dipasha_haldar.jpeg' %}" alt="Dipasha Haldar" class="profile-pic" style="object-fit:cover;">
+          <div>
+            <h5 class="fw-semibold mb-1 text-light">Dipasha Haldar</h5>
+            <p class="text-info-emphasis mb-1">Frontend Developer</p>
+            <p class="small text-warning">UI • Bootstrap • Design</p>
+          </div>
+        </div>
+        <p class="text-white">Focused on frontend experience, polished UI components, and responsive page design.</p>
+        <p class="small text-white"><strong>Responsibilities:</strong> Frontend development • Responsive layout • User experience</p>
+      </div>
+    </div>
+
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+      <div class="team-card p-4 h-100">
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <img src="{% static 'images/adrita_dey.jpeg' %}" alt="Adrita Dey" class="profile-pic" style="object-fit:cover;">
+          <div>
+            <h5 class="fw-semibold mb-1 text-light">Adrita Dey</h5>
+            <p class="text-info-emphasis mb-1">Logic Builder</p>
+            <p class="small text-warning">Logic • Integration • Project flow</p>
+          </div>
+        </div>
+        <p class="text-white">Connects the overall project logic, workflow, and future system integration ideas into one coherent structure.</p>
+        <p class="small text-white"><strong>Responsibilities:</strong> Logic building • Workflow planning • Cross-project integration</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

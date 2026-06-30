@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Analysis | Crunchyroll Trend Analysis
+{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">
+            Crunchyroll Trend Analysis Dashboard
+        </h1>
+
+        <p class="lead text-muted">
+            Power BI Dashboard Visualizations
+        </p>
+    </div>
+
+    <!-- Dashboard 1 -->
+    <div class="glass-card p-4 mb-5">
+        <h3 class="mb-4">Overview Dashboard</h3>
+
+        <img src="{% static 'images/dashboard_1.png' %}"
+             class="img-fluid rounded shadow"
+             alt="Overview Dashboard">
+    </div>
+
+    <!-- Dashboard 2 -->
+    <div class="glass-card p-4 mb-5">
+        <h3 class="mb-4">Genre Analysis</h3>
+
+        <img src="{% static 'images/dashboard_2.png' %}"
+             class="img-fluid rounded shadow"
+             alt="Genre Analysis">
+    </div>
+
+    <!-- Dashboard 3 -->
+    <div class="glass-card p-4">
+        <h3 class="mb-4">Project Insights</h3>
+
+        <img src="{% static 'images/dashboard_3.png' %}"
+             class="img-fluid rounded shadow"
+             alt="Project Insights">
+    </div>
+
+</div>
+
+{% endblock %}
